@@ -94,7 +94,7 @@ ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
-ax.set_box_aspect([1, 1, 1])
+# ax.set_box_aspect([1, 1, 1])
 ax.view_init(elev=20, azim=30)
 ax.set_proj_type('persp')
 plt.subplots_adjust(bottom=0.1, top=0.9)
