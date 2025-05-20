@@ -1,8 +1,9 @@
 import pandas as pd
 import json
 
+file_path = r"E:\3DModels\ABC\step_siggraph_new"
 # 读取JSON文件内容
-with open(r"E:\3DModels\ABC\exp_models\test_results.json", 'r') as f:
+with open(file_path + r"\test_results.json", 'r') as f:
     data = json.load(f)
 
 # 创建一个空的DataFrame，用于存储数据
@@ -13,4 +14,4 @@ for file, info in data.items():
     df.loc[len(df)] = [file, info["face_count"], info['entity_count'], info['hausdorff_error'], info['runtime'], info['volumetric_error']]
 
 # 将DataFrame保存到Excel文件中
-df.to_excel('test_results_face_count.xlsx', index=False)
+df.to_excel(file_path + r'\test_results_face_count.xlsx', index=False)
